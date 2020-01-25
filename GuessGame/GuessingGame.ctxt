@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.target=GuessingGame
+comment0.text=\r\n\ Guess\ a\ secret\ number\ between\ 1\ and\ an\ upper\tbound.\r\n\r\n\r\n
+comment1.params=
+comment1.target=GuessingGame()
+comment1.text=Initialize\ a\ new\ game\ with\ a\ default\ upperbound.
+comment2.params=limit
+comment2.target=int\ getRandomNumber(int)
+comment2.text=\r\n\ Get\ a\ random\tnumber\ between\ 1\ and\ limit.\r\n\ @param\ limit\tis\ the\ upper\ limit\ for\ the\ random\ number.\r\n\ @return\ a\ random\tinteger\r\n
+comment3.params=number
+comment3.target=boolean\ guess(int)
+comment3.text=\r\n\ Evaluate\ta\ guess.\r\n\ @param\ number\ is\ta\ guess\tof\ the\ secret\ number.\r\n\ @return\ true\tif\ the\ guess\ is\tcorrect,\ false\ otherwise.\r\n
+comment4.params=
+comment4.target=java.lang.String\ getMessage()
+comment4.text=\r\n\ Get\ a\ message\ (hint)\ based\ on\ most\ recent\ guess.\r\n\ If\ nothing\ has\ been\ guessed\ yet\ then\tthe\thint\r\n\ describes\ the\ game.\r\n\ @return\ a\ message\ about\ game\ or\ most\ recent\ guess\r\n
+comment5.params=
+comment5.target=int\ getUpperBound()
+comment5.text=\tGet\tthe\tgame\ upper\ bound\ for\ the\ secret\tnumber.\t\r\n
+comment6.params=msg
+comment6.target=void\ setMessage(java.lang.String)
+comment7.params=number\ secret
+comment7.target=java.lang.String\ makeHint(int,\ int)
+comment7.text=\r\n\ Create\ a\thint\ based\ on\ the\ last\ guess.\r\n\ @param\ number\ is\tthe\tmost\ recent\tguess\r\n\ @param\ secret\ is\tthe\tsecret\ number\r\n
+numComments=8
