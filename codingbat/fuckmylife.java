@@ -52,6 +52,28 @@ public class fuckmylife{
     }
 
     public int roundSum(int a, int b, int c) {
+        a = round10(a);
+        b = round10(b);
+        c = round10(c);
+        return a + b + c;
+    }
+
+    public int round10(int num) {
+        int firstDigit = num / 10;
+        int lastDigit = num % 10;
+        if(lastDigit < 5)
+            num = 10*firstDigit;
+        else if(lastDigit >= 5)
+            num = 10*(firstDigit+1);
+        return num;
+    }
+
+    public boolean closeFar(int a, int b, int c) {
   
     }
+
+    // public static void main(String[] args) {
+    //     System.out.println(fuckmylife.round10(4));
+    // }
 }
+
