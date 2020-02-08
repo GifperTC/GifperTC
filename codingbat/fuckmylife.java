@@ -74,7 +74,7 @@ public class fuckmylife{
     }
 
     public static void main(String[] args) {
-        System.out.println(fuckmylife.closeFar(1, 2, 3));
+        System.out.println(fuckmylife.closeFar(1, 3, 2));
     }
 }
 
