@@ -62,18 +62,19 @@ public class fuckmylife{
         int firstDigit = num / 10;
         int lastDigit = num % 10;
         if(lastDigit < 5)
-            num = 10*firstDigit;
+            num = 10 * firstDigit;
         else if(lastDigit >= 5)
-            num = 10*(firstDigit+1);
+            num = 10 * (firstDigit + 1);
         return num;
     }
 
-    public boolean closeFar(int a, int b, int c) {
-  
+    public static boolean closeFar(int a, int b, int c) {
+
+        return (Math.abs(a - b) <= 1 && Math.abs(a - c) < 2 && Math.abs(b - c) < 2 || Math.abs(b - a) <= 1 && Math.abs(c - a) < 2 && Math.abs(c - b) < 2);
     }
 
-    // public static void main(String[] args) {
-    //     System.out.println(fuckmylife.round10(4));
-    // }
+    public static void main(String[] args) {
+        System.out.println(fuckmylife.closeFar(1, 2, 3));
+    }
 }
 
