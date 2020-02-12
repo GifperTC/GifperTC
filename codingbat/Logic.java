@@ -1,4 +1,4 @@
-public class fuckmylife{
+public class Logic{
     public boolean makeBricks(int small, int big, int goal) {
         int maxBig = goal/5;
           if(maxBig <= big)
@@ -68,13 +68,57 @@ public class fuckmylife{
         return num;
     }
 
-    public static boolean closeFar(int a, int b, int c) {
+    public boolean closeFar(int a, int b, int c) {
 
-        return (Math.abs(a - b) <= 1 && Math.abs(a - c) < 2 && Math.abs(b - c) < 2 || Math.abs(b - a) <= 1 && Math.abs(c - a) < 2 && Math.abs(c - b) < 2);
+        return (Math.abs(b-a) <= 1 && Math.abs(c-a) >= 2 && Math.abs(c-b) >= 2
+        || Math.abs(c-a) <= 1 && Math.abs(b-a) >= 2 && Math.abs(b-c) >= 2);    }
+        
+    public int blackjack(int a, int b) {
+        if(a > 21){
+            if(b > 21)
+                return 0;
+            return b;
+        }
+        else if(b > 21)
+            return a;
+        else if(a > b)
+            return a;
+        return b;
     }
 
-    public static void main(String[] args) {
-        System.out.println(fuckmylife.closeFar(1, 3, 2));
+    public boolean evenlySpaced(int a, int b, int c) {
+        int num;
+	    if(b > a){
+		    num = a;
+		    a = b;
+		    b = num;
+	    }
+	    if(c > b){
+		    num = b;
+		    b = c;
+		    c = num;
+	    }
+	    if(b > a){
+		    num = a;
+		    a = b;
+		    b = num;
+	    }   
+	    return(a - b == b - c);
     }
+
+    public int makeChocolate(int small, int big, int goal) {
+        int maxBig = goal/5;
+          if(maxBig <= big)
+              goal -= maxBig*5;
+          else
+              goal -= big*5;
+          if(goal <= small)
+              return goal;
+          return -1;
+    }
+        
+    // public static void main(String[] args) {
+    //     System.out.println(Logic.blackjack(19, 22));
+    // }
 }
 
